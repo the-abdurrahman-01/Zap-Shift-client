@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router";
+import Logo from "../../../../../components/Logo/Logo";
 
 const Navbar = () => {
   const links = (
     <>
       <li><NavLink to="">Services</NavLink></li>
-      <li><NavLink to="">Services</NavLink></li>
-      <li><NavLink to="">Services</NavLink></li>
+      <li><NavLink to="">About Us</NavLink></li>
+      <li><NavLink to="/coverage">Coverage</NavLink></li>
       <li><NavLink to="">Services</NavLink></li>
       <li>
         <a>Item 3</a>
@@ -41,7 +42,11 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+    
+    <div className="flex flex-end">
+          <img src={Logo} alt=""/>
+              <a className="btn btn-ghost text-3xl font-bold -ms-2.5">ZapShift</a>
+    </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
